@@ -46,9 +46,11 @@
 
 
                   <td><a href="?p=org-mgr&m=2&oid=<?php echo $organizer["id"]; ?>" >Edit</a> |
-                    <a href="?p=org-mgr&m=3&oid=<?php echo $organizer["id"]; ?>" >Delete</a> |
-                    <a target="_blank" href="?p=service-mgr&oid=<?php echo $organizer["id"]; php?>" >Fetch Data</a>
+                    <a href="?p=org-mgr&m=3&oid=<?php echo $organizer["id"]; ?>" >Delete</a>
 
+                    <?php if($organizer["fetch_enabled"]==1) {?> |
+                    <a target="_blank" href="?p=service-mgr&oid=<?php echo $organizer["id"]; php?>" >Fetch Data</a>
+                <?php  }?>
                   </td>
                 </tr>
                 <?php } ?>
@@ -59,5 +61,5 @@
 
             include_once("org-edit.php");
            } ?>
-                
+
           </div>

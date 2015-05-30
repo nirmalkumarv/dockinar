@@ -19,6 +19,11 @@
 
                           <?php } ?>
                         </select>
+												<br><br>
+												Fetch Data :<br>
+												<input type="radio" <?php echo $organizer["fetch_enabled"]==1?"checked":"";?> name="fetch_enabled" value=1 id="rd1"><label for="rd1">Enable</label>
+												<input type="radio" <?php echo $organizer["fetch_enabled"]==0?"checked":"";?> name="fetch_enabled" value=0 id="rd2"><label for="rd2">Disable</label>
+
                       </div>
                     </div>
                     <hr>
